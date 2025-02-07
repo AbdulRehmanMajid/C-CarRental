@@ -38,6 +38,9 @@ class rent : public customer
         cout<<"\tEnter 'D' for Toyta Hilux."<<endl;
         cout<<"\tEnter 'E' for LandCruiser."<<endl;
         cout<<"\tEnter 'F' for RangeRover."<<endl;
+        cout<<"\tEnter 'G' for Suzuki Mehran."<<endl;
+        cout<<"\tEnter 'H' for Suzuki Alto."<<endl;
+        cout<<"\tEnter 'I' for Honda Civic."<<endl;
         cout<<endl;
         cout<<"\tChoose a Car from the above options: ";
         cin >>carmodel;
@@ -106,11 +109,47 @@ if(carmodel=="F")
      }
      sleep(2);
 }
-if(carmodel !="A" && carmodel !="B" &&  carmodel !="C" &&  carmodel !="E" &&  carmodel !="F")
+if(carmodel=="G")
+ {
+ 	system("CLS");
+	     cout<<"You have choosed Suzuki Mehran"<<endl;
+		 ifstream inC("G.txt");
+         char str[200];
+         while(inC) {
+         inC.getline(str, 200);
+         if(inC) cout << str << endl;
+     }
+     sleep(2);
+}
+if(carmodel=="H")
+ {
+ 	system("CLS");
+	     cout<<"You have choosed Suzuki Alto"<<endl;
+		 ifstream inC("H.txt");
+         char str[200];
+         while(inC) {
+         inC.getline(str, 200);
+         if(inC) cout << str << endl;
+     }
+     sleep(2);
+}
+if(carmodel=="I")
+ {
+ 	system("CLS");
+	     cout<<"You have choosed Honda Civic"<<endl;
+		 ifstream inC("I.txt");
+         char str[200];
+         while(inC) {
+         inC.getline(str, 200);
+         if(inC) cout << str << endl;
+     }
+     sleep(2);
+}
+if(carmodel !="A" && carmodel !="B" &&  carmodel !="C" &&  carmodel !="E" &&  carmodel !="F" &&  carmodel !="G" &&  carmodel !="H"&&  carmodel !="I")
 
       cout<<"Invaild Car Model. Please try again!"<<endl;
         }
-while(carmodel !="A" && carmodel !="B" &&  carmodel !="C" &&  carmodel !="E" &&  carmodel !="F");
+while(carmodel !="A" && carmodel !="B" &&  carmodel !="C" &&  carmodel !="E" &&  carmodel !="F" &&  carmodel !="G" &&  carmodel !="H"&&  carmodel !="I");
     cout<<"--------------------------------------------------------------------------"<<endl;
     cout << "Please provide following information: "<<endl;
 
@@ -136,6 +175,12 @@ while(carmodel !="A" && carmodel !="B" &&  carmodel !="C" &&  carmodel !="E" && 
         rentalfee=days*100;
         if(carmodel == "F" ||carmodel=="F")
         rentalfee=days*125;
+        if(carmodel == "G" ||carmodel=="G")
+        rentalfee=days*150;
+        if(carmodel == "H" ||carmodel=="H")
+        rentalfee=days*175;
+        if(carmodel == "I" ||carmodel=="I")
+        rentalfee=days*200;
     }
 void showrent()
     {
@@ -222,4 +267,3 @@ int login(){
       login();
    }
 }
-
