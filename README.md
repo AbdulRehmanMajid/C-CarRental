@@ -7,7 +7,7 @@ The Car Rental System is a console-based C++ application designed to manage car 
 - #### Receipt Generation: After the rental information is processed, the system generates a detailed receipt that includes the car's information, rental duration, and total cost.
 - #### Error Handling: The program includes basic error handling to ensure the user provides valid inputs for both the car selection and rental duration.
 
-##Getting Started
+## Getting Started
 - #### Prerequisites
 To run the Car Rental System, you need to have the following software installed:
 
